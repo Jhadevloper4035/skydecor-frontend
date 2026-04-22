@@ -91,7 +91,7 @@ export default function OurServices() {
               <div className="satisfy-client-images">
                 <div className="satisfy-client-image">
                   <figure className="image-anime">
-                    <img src="/images/author-1.jpg" alt="" />
+                    <img src="/images/avatar/user-1.jpg" alt="" />
                   </figure>
                 </div>
                 <div className="satisfy-client-image add-more">

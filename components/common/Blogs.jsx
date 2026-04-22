@@ -38,10 +38,7 @@ export default function Blogs({
           dir="ltr"
           className="swiper tf-sw-recent"
           modules={[Pagination]}
-          pagination={{
-            clickable: true,
-            el: ".spd1",
-          }}
+          pagination={{ clickable: true }}
         >
           {blogPosts.map((post, index) => (
             <SwiperSlide key={index} className="swiper-slide">
@@ -76,7 +73,6 @@ export default function Blogs({
             </SwiperSlide>
           ))}
 
-          <div className="sw-pagination-recent spd1 sw-dots type-circle justify-content-center" />
         </Swiper>
       </div>
     </section>

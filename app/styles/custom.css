@@ -4051,14 +4051,7 @@ header.main-header .header-sticky.active {
 }
 
 .cta-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: var(--primary-color);
-    opacity: 60%;
+    display: none; /* overlay handled inline */
 }
 
 .cta-box .container {

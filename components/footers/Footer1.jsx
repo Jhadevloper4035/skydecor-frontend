@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import ToolbarBottom from "../headers/ToolbarBottom";
 import ScrollTop from "../common/ScrollTop";
 import { footerLinks, socialLinks } from "@/data/footerLinks";
 import axios from "axios";
@@ -334,7 +333,6 @@ export default function Footer1({
         </div>
       </footer>
       <ScrollTop hasPaddingBottom={hasPaddingBottom} />
-      <ToolbarBottom />
     </>
   );
 }

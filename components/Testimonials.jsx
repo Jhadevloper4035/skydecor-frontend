@@ -25,10 +25,10 @@ const testimonials = [
 ];
 
 const authorImages = [
-  "/images/author-1.jpg",
-  "/images/author-2.jpg",
-  "/images/author-3.jpg",
-  "/images/author-4.jpg",
+  "/images/avatar/user-1.jpg",
+  "/images/avatar/user-2.jpg",
+  "/images/avatar/user-3.jpg",
+  "/images/avatar/user-4.jpg",
 ];
 
 export default function Testimonials() {
@@ -116,7 +116,7 @@ export default function Testimonials() {
               <div className="satisfy-client-images">
                 <div className="satisfy-client-image">
                   <figure className="image-anime">
-                    <img src="/images/author-1.jpg" alt="Author" />
+                    <img src="/images/avatar/user-1.jpg" alt="Author" />
                   </figure>
                 </div>
                 <div className="satisfy-client-image add-more">

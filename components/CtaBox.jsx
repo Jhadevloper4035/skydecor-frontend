@@ -1,5 +1,3 @@
-// components/CtaBox.js
-
 const ctaItems = [
   {
     id: 1,
@@ -26,8 +24,28 @@ const ctaItems = [
 
 export default function CtaBox() {
   return (
-    <div className="cta-box dark-section parallaxie" style={{ backgroundImage: "url('/images/thar.jpeg')" }} >
-      <div className="container">
+    <div
+      className="cta-box dark-section"
+      style={{
+        backgroundImage: "url('/images/thar.jpeg')",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Dark overlay */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "var(--primary-color)",
+          opacity: 0.6,
+          zIndex: 1,
+        }}
+      />
+
+      <div className="container" style={{ position: "relative", zIndex: 2 }}>
 
         {/* Top Row */}
         <div className="row align-items-center">
@@ -38,7 +56,7 @@ export default function CtaBox() {
               <div className="section-title">
                 <h3 className="heading wow fadeInUp">Get In Touch</h3>
                 <h2 className="heading text-anime-style-3" data-cursor="-opaque">
-                  Transform Your Space with SkyDecor 
+                  Transform Your Space with SkyDecor
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   Whether you're fitting out a home, office, or commercial space in Dubai or across the UAE, our laminate experts are ready to help you choose the perfect finish.
@@ -73,7 +91,7 @@ export default function CtaBox() {
                     <img src={item.icon} alt={item.title} />
                   </div>
                   <div className="cta-item-content">
-                    <h3 className="">{item.line1}<br />{item.line2}</h3>
+                    <h3>{item.line1}<br />{item.line2}</h3>
                   </div>
                 </div>
               ))}

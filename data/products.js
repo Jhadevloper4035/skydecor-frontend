@@ -662,7 +662,7 @@ export const products5 = [
   {
     id: 21,
     imgSrc: "/images/collections/cls-tiktok1.jpg",
-    videoSrc: "/images/video/skin-care1.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-tiktok1.jpg",
     wowDelay: "0s",
     title: "Faux-leather trousers",
@@ -671,7 +671,7 @@ export const products5 = [
   {
     id: 22,
     imgSrc: "/images/collections/cls-tiktok2.jpg",
-    videoSrc: "/images/video/skin-care2.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-tiktok2.jpg",
     wowDelay: "0.1s",
     title: "Faux-leather trousers",
@@ -680,7 +680,7 @@ export const products5 = [
   {
     id: 23,
     imgSrc: "/images/collections/cls-tiktok3.jpg",
-    videoSrc: "/images/video/skin-care3.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-tiktok3.jpg",
     wowDelay: "0.2s",
     title: "Faux-leather trousers",
@@ -689,7 +689,7 @@ export const products5 = [
   {
     id: 24,
     imgSrc: "/images/collections/cls-tiktok4.jpg",
-    videoSrc: "/images/video/skin-care1.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-tiktok4.jpg",
     wowDelay: "0.3s",
     title: "Faux-leather trousers",
@@ -800,7 +800,7 @@ export const products9 = [
   {
     id: 35,
     imgSrc: "/images/collections/cls-tiktok5.jpg",
-    videoSrc: "/images/video/skin-care1.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-beauty1.jpg",
     title: "Skin Perfecting 2% BHA",
     price: 60.0,
@@ -809,7 +809,7 @@ export const products9 = [
   {
     id: 36,
     imgSrc: "/images/collections/cls-tiktok6.jpg",
-    videoSrc: "/images/video/skin-care2.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-beauty2.jpg",
     title: "Resist Super-​Light Daily",
     price: 60.0,
@@ -818,7 +818,7 @@ export const products9 = [
   {
     id: 37,
     imgSrc: "/images/collections/cls-tiktok7.jpg",
-    videoSrc: "/images/video/skin-care3.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-beauty3.jpg",
     title: "Advanced Snail 96 Mucin",
     price: 60.0,
@@ -827,7 +827,7 @@ export const products9 = [
   {
     id: 38,
     imgSrc: "/images/collections/cls-tiktok8.jpg",
-    videoSrc: "/images/video/skin-care1.mp4",
+    videoSrc: "",
     avatarSrc: "/images/avatar/avt-beauty4.jpg",
     title: "Facial Hydrating Cream",
     price: 60.0,

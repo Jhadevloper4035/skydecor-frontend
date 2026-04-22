@@ -52,7 +52,7 @@ export default function AboutUs() {
                     <div className="achievement-item-header-elite">
                       <div className="achievement-item-title-elite">
                         <div className="icon-box">
-                          <img src="/images/icon-about-achievement-elite.svg" alt="" />
+                          <i className="fas fa-award" style={{ fontSize: "1.5rem" }}></i>
                         </div>
                         <div className="achievement-item-no">
                           <h2 className="heading"><span className="counter">200</span>+</h2>
@@ -119,7 +119,7 @@ export default function AboutUs() {
                 {/* Counter Box */}
                 <div className="about-counter-box-e lite">
                   <div className="icon-box">
-                    <img src="/images/icon-about-counter-box.svg" alt="" />
+                    <i className="fas fa-clock" style={{ fontSize: "1.5rem" }}></i>
                   </div>
                   <div className="about-counter-content-elite">
                     <h2 className="heading"><span className="counter">5000</span>+</h2>

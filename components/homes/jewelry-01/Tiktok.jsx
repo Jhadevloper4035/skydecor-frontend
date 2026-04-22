@@ -13,8 +13,8 @@ export default function Tiktok({ parentClass = "flat-spacing  testi-tiktok " }) 
     videoRefs.current.forEach((video, i) => {
       if (video) {
         if (i === index) {
-          video.play();
-          setActiveVideoIndex(index); // Set active video index
+          video.play().catch(() => {});
+          setActiveVideoIndex(index);
         } else {
           video.pause();
         }
@@ -75,6 +75,7 @@ export default function Tiktok({ parentClass = "flat-spacing  testi-tiktok " }) 
                   width={300}
                   height={600}
                   playsInline
+                  muted
                   loop
                 >
                   <source src={slide.videoSrc} type="video/mp4" />

@@ -26,15 +26,14 @@ import "../public/css/image-compare-viewer.min.css";
 import { useEffect, useState } from "react";
 import Context from "@/context/Context";
 
+import PageLoader from "@/components/common/PageLoader";
 import QuickView from "@/components/modals/QuickView";
-import QuickAdd from "@/components/modals/QuickAdd";
 import Compare from "@/components/modals/Compare";
 import MobileMenu from "@/components/modals/MobileMenu";
 import SearchModal from "@/components/modals/SearchModal";
 
 import DemoModal from "@/components/modals/DemoModal";
 import Categories from "@/components/modals/Categories";
-import AccountSidebar from "@/components/modals/AccountSidebar";
 
 
 // import SizeGuide from "@/components/modals/SizeGuide";
@@ -106,24 +105,15 @@ export default function RootLayout({ children }) {
   }, [pathname]);
   useEffect(() => {
     // Close any open modal
-    const bootstrap = require("bootstrap"); // dynamically import bootstrap
-    const modalElements = document.querySelectorAll(".modal.show");
-    modalElements.forEach((modal) => {
-      const modalInstance = bootstrap.Modal.getInstance(modal);
-      if (modalInstance) {
-        modalInstance.hide();
-      }
+    import("bootstrap").then((bs) => {
+      document.querySelectorAll(".modal.show").forEach((modal) => {
+        bs.Modal.getInstance(modal)?.hide();
+      });
+      document.querySelectorAll(".offcanvas.show").forEach((offcanvas) => {
+        bs.Offcanvas.getInstance(offcanvas)?.hide();
+      });
     });
-
-    // Close any open offcanvas
-    const offcanvasElements = document.querySelectorAll(".offcanvas.show");
-    offcanvasElements.forEach((offcanvas) => {
-      const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
-      if (offcanvasInstance) {
-        offcanvasInstance.hide();
-      }
-    });
-  }, [pathname]); // Runs every time the route changes
+  }, [pathname]);
 
   useEffect(() => {
     const header = document.querySelector("header");
@@ -136,29 +126,26 @@ export default function RootLayout({ children }) {
     }
   }, [scrollDirection]);
   useEffect(() => {
-    const WOW = require("@/utlis/wow");
-    const wow = new WOW.default({
-      mobile: false,
-      live: false,
+    import("@/utlis/wow").then(({ default: WOW }) => {
+      const wow = new WOW({ mobile: false, live: false });
+      wow.init();
     });
-    wow.init();
   }, [pathname]);
   return (
     <html lang="en">
       <body className="preload-wrapper popup-loader">
+        <PageLoader />
         <Context>
           <Topbar />
           <Header1 />
           <div id="wrapper">{children}</div>
           <Footer1 />
           <QuickView />
-          <QuickAdd />
           <Compare />
           <MobileMenu />
           <SearchModal />
           <DemoModal />
           <Categories />
-          <AccountSidebar />
 
         </Context>
 

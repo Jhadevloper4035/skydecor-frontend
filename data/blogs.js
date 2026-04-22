@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: 1,
-    imgSrc: "https://skydecor.in/images/blogs/1.png",
+    imgSrc: "https://skydecor.in/images/blogs/4.png",
     alt: "Blog Image 1",
     date: "13 August",
     title: "Top 10 Summer Fashion Trends You Can't Miss in 2024",

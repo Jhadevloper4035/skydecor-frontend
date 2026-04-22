@@ -13,8 +13,8 @@ export default function Tiktok({ parentClass = "flat-spacing pt-0" }) {
     videoRefs.current.forEach((video, i) => {
       if (video) {
         if (i === index) {
-          video.play();
-          setActiveVideoIndex(index); // Set active video index
+          video.play().catch(() => {});
+          setActiveVideoIndex(index);
         } else {
           video.pause();
         }

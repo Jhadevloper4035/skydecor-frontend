@@ -48,8 +48,14 @@ export default function Products3({ parentClass = "flat-spacing-3" }) {
               role="tabpanel"
             >
               <div className="tf-grid-layout tf-col-2 lg-col-3 xl-col-4">
-                {filteredProducts.map((product) => (
-                  <ProductCard1 key={product._id} product={product} />
+                {filteredProducts.map((product, index) => (
+                  <div
+                    key={product._id}
+                    className="wow fadeInUp"
+                    data-wow-delay={`${index * 0.1}s`}
+                  >
+                    <ProductCard1 product={product} />
+                  </div>
                 ))}
               </div>
               <div className="sec-btn text-center">
